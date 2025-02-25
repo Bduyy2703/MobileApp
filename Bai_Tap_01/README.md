@@ -1,5 +1,5 @@
 # Bài tập tuần 1
-- 21110359 - Lê Xuân Bách
+- 21110153 - Nguyễn Lê Bảo Duy
 ---------------------
 ## Steps
 
@@ -81,5 +81,4 @@ export default App;
 ![simulator_screenshot_828E911B-42BD-47A6-BF16-F25876F79011](https://github.com/user-attachments/assets/e057132c-9356-46f8-a39b-8396e5af74cb)
 </br>
 ![simulator_screenshot_501FB1E3-52A8-46A8-AEE3-8EA86096F568](https://github.com/user-attachments/assets/217f2480-0865-4a36-88f1-485f502692c3)
-
 

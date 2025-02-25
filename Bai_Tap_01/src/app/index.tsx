@@ -46,11 +46,11 @@ const App = () => {
             />
           </View>
           <View className="bg-white w-full h-full">
-            <Item label="Student ID:" text="21110359" />
-            <Item label="Fullname:" text="Lê Xuân Bách" />
-            <Item label="Email:" text="21110359@student.hcmute.edu.vn" />
-            <Item label="Date of Birth:" text="16/08/2003" />
-            <Item label="Mobile" text="+82 0816429848" />
+            <Item label="Student ID:" text="21110153" />
+            <Item label="Fullname:" text="Nguyễn Lê Bảo Duy" />
+            <Item label="Email:" text="21110153@student.hcmute.edu.vn" />
+            <Item label="Date of Birth:" text="27/10/2003" />
+            <Item label="Mobile" text="+82 888321748" />
             <View className="bg-black h-full w-full mt-16 flex items-center">
               <Text className="text-white font-Poppins-Medium text-lg mt-2">
                 Move to Home Screen in: {counter}

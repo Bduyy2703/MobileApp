@@ -1,4 +1,4 @@
 export default {
-  avt: require("assets/avt.png"),
+  avt: require("assets/a.jpg"),
   avtBg: require("assets/avt-bg.jpg"),
 };
