@@ -15,7 +15,7 @@ npx expo install expo-router react-native-safe-area-context react-native-screens
 
 **Source structure convention**</br>
 
-<img width="253" alt="Screenshot 2025-02-22 at 3 17 01 PM" src="https://github.com/user-attachments/assets/458b3e16-bab5-4bbc-b4fa-0951e3f1869f" />
+<img width="253" alt="Screenshot 2025-02-22 at 3 17 01 PM" src="https://github.com/user-attachments/assets/54f1faf5-cbd5-4b0e-9f31-32401c045155" />
 
 ### Step 2: On boarding Screen
 ```code
@@ -78,7 +78,7 @@ export default App;
 
 ---------------------
 ## Result
-![simulator_screenshot_828E911B-42BD-47A6-BF16-F25876F79011](https://github.com/user-attachments/assets/e057132c-9356-46f8-a39b-8396e5af74cb)
+![simulator_screenshot_828E911B-42BD-47A6-BF16-F25876F79011](https://github.com/user-attachments/assets/54f1faf5-cbd5-4b0e-9f31-32401c045155)
 </br>
-![simulator_screenshot_501FB1E3-52A8-46A8-AEE3-8EA86096F568](https://github.com/user-attachments/assets/217f2480-0865-4a36-88f1-485f502692c3)
+![simulator_screenshot_501FB1E3-52A8-46A8-AEE3-8EA86096F568](https://github.com/user-attachments/assets/5c5de192-5fb0-4e3d-8994-d907d4b781d1)
 
