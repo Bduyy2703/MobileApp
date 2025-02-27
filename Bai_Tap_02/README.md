@@ -1,5 +1,5 @@
 # Bài tập tuần 2
-- 21110359 - Lê Xuân Bách
+- 21110153 - Nguyễn Lê Bảo Duy
 
 ## Results
 ![simulator_screenshot_BBE16A59-06FC-4AE2-B531-0F22D5D6F653](https://github.com/user-attachments/assets/406471ed-7f45-4465-9f4a-5709c42edb82)

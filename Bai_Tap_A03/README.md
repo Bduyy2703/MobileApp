@@ -1,5 +1,5 @@
 # Bài tập tuần 03 (Bài tập A03)
-- 21110359 - Lê Xuân Bách
+- Nguyễn Lê Bảo Duy
 
 ## Results
 ![Simulator Screenshot - iPhone 16 - 2025-02-23 at 18 01 18](https://github.com/user-attachments/assets/6258c254-aabd-4fe8-aff2-9eeadb3fef36)
