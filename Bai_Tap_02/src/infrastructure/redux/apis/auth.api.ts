@@ -13,7 +13,7 @@ export const authApi = createApi({
   reducerPath: "auth-api",
   tagTypes: ["auth"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000/api/auth/",
+    baseUrl: "http://192.168.50.83:3000/api/auth/",
   }),
   endpoints: (builder) => ({
     // Đăng nhập

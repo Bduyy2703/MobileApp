@@ -3,6 +3,7 @@ import { View, Text, TextInput, Button, Alert } from "react-native";
 import { useRegisterAsyncMutation } from "../../infrastructure/redux/apis/auth.api";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { router } from "expo-router";
 
 // Định nghĩa kiểu dữ liệu cho navigation
 type RootStackParamList = {
@@ -28,7 +29,8 @@ const SignUp = () => {
       Alert.alert("Thành công", "Vui lòng nhập OTP để xác minh tài khoản.");
 
       // Chuyển sang màn hình OTP, truyền email để xác minh
-      navigation.navigate("OtpScreen", { email });
+      router.push({ pathname: "/otp-screen", params: { email } });
+
     } catch (error) {
       Alert.alert("Lỗi", error.data?.message || "Đăng ký thất bại");
     }
@@ -46,6 +48,9 @@ const SignUp = () => {
       <TextInput value={confirmPassword} onChangeText={setConfirmPassword} placeholder="Nhập lại mật khẩu" secureTextEntry />
 
       <Button title={isLoading ? "Đang đăng ký..." : "Đăng ký"} onPress={handleSignUp} disabled={isLoading} />
+
+      {/* Nút quay lại đăng nhập */}
+      <Button title="Quay lại đăng nhập" onPress={() => router.push("/sign-in")} />
     </View>
   );
 };

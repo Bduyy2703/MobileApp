@@ -11,7 +11,7 @@ type OtpScreenRouteParams = {
 const OtpScreen = () => {
   const navigation = useNavigation();
   const route = useRoute<RouteProp<{ params: OtpScreenRouteParams }, "params">>();
-
+    console.log(route.params)
   // Kiểm tra nếu route.params tồn tại và có email
   const email = route.params?.email ?? "";
 

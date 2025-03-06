@@ -12,8 +12,18 @@ import AuthLayout from "~/components/layouts/AuthLayout";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { router } from "expo-router";
+
+// Định nghĩa kiểu dữ liệu cho navigation
+type RootStackParamList = {
+  SignUp: undefined;
+};
 
 const SignInScreen = () => {
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
   const loginSchema = z.object({
     email: z.string().email({
       message: "Please enter a valid email",
@@ -40,9 +50,7 @@ const SignInScreen = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit: SubmitHandler<LoginFormType> = async (
-    data: LoginFormType
-  ) => {
+  const onSubmit: SubmitHandler<LoginFormType> = async (data: LoginFormType) => {
     try {
       setIsSubmitting(true);
       // Simulate API call
@@ -62,24 +70,22 @@ const SignInScreen = () => {
       <AuthLayout>
         <View className="flex items-center justify-center h-screen">
           <Text className="text-white font-Poppins-Bold text-2xl mb-4">
-            Login screen
+            Login Screen
           </Text>
 
+          {/* Input Email */}
           <View className="p-2 rounded-lg w-96">
             <Controller
               name="email"
               control={control}
-              render={({
-                field: { onBlur, onChange, value },
-                fieldState: { error },
-              }) => (
+              render={({ field: { onBlur, onChange, value } }) => (
                 <View>
                   <Text className="text-black font-TenorSans-Regular text-lg mb-4">
                     Email
                   </Text>
                   <TextInput
                     value={value}
-                    onChangeText={onChange} // Changed from onChange
+                    onChangeText={onChange}
                     onBlur={onBlur}
                     className="bg-white px-3 py-2 text-lg rounded-md"
                     autoCapitalize="none"
@@ -95,21 +101,19 @@ const SignInScreen = () => {
             />
           </View>
 
+          {/* Input Password */}
           <View className="p-2 rounded-lg w-96">
             <Controller
               name="password"
               control={control}
-              render={({
-                field: { onBlur, onChange, value },
-                fieldState: { error },
-              }) => (
+              render={({ field: { onBlur, onChange, value } }) => (
                 <View>
                   <Text className="text-black font-TenorSans-Regular text-lg mb-4">
                     Password
                   </Text>
                   <TextInput
                     value={value}
-                    onChangeText={onChange} // Changed from onChange
+                    onChangeText={onChange}
                     onBlur={onBlur}
                     className="bg-white px-3 py-2 text-lg rounded-md"
                     secureTextEntry
@@ -124,17 +128,25 @@ const SignInScreen = () => {
             />
           </View>
 
+          {/* Nút Submit */}
           <TouchableOpacity
             onPress={handleSubmit(onSubmit)}
-            className={`bg-primary p-2 rounded-lg w-96 mt-4 ${
-              isSubmitting ? "opacity-50" : ""
-            }`}
+            className={`bg-primary p-2 rounded-lg w-96 mt-4 ${isSubmitting ? "opacity-50" : ""
+              }`}
             disabled={isSubmitting}
           >
             <Text className="text-center text-white font-bold">
               {isSubmitting ? "Submitting..." : "Submit"}
             </Text>
           </TouchableOpacity>
+
+          {/* Nút Đăng Ký */}
+          <TouchableOpacity
+            onPress={() => router.push("/sign-up")} // ✅ Sửa lỗi điều hướng
+            className="bg-secondary p-2 rounded-lg w-96 mt-2"
+          >
+            <Text className="text-center text-white font-bold">Sign Up</Text>
+          </TouchableOpacity>;
         </View>
       </AuthLayout>
     </SafeAreaView>
