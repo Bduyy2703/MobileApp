@@ -11,7 +11,7 @@ import axios from "axios";
 
 const SignIn = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const {
     control,
     handleSubmit,
@@ -27,7 +27,7 @@ const SignIn = () => {
   const onSubmit: SubmitHandler<LoginFormType> = async (data) => {
     setIsSubmitting(true);
     try {
-      const response = await axios.post("http://192.168.7.236:3000/api/auth/login", data, {
+      const response = await axios.post("http://192.168.50.83:3000/api/auth/login", data, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -36,7 +36,12 @@ const SignIn = () => {
       if (response.status === 200) {
         alert("Đăng nhập thành công!");
         console.log(response.data);
-        router.push("/profile");
+        router.push({
+          pathname: "/profile",
+          params: {
+            email: data.email,
+          },
+        });
       } else {
         alert("Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.");
       }
