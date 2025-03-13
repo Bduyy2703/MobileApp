@@ -60,7 +60,7 @@ const ProfileScreen = () => {
       setError(null);
       try {
         const response = await axios.get(
-          `http://10.5.50.163:3000/api/users/profiles/${email}`,
+          `http://172.20.10.2:3000/api/users/profiles/${email}`,
           {
             headers: {
               "Accept": "application/json",
@@ -175,8 +175,8 @@ const ProfileScreen = () => {
     try {
       const formData = new FormData();
 
-      formData.append("firstName", "huy"); 
-      formData.append("lastName", "cuong"); 
+      formData.append("firstName", "Duy"); 
+      formData.append("lastName", "Nguyen"); 
       formData.append("phoneNumber", data.phoneNumber);
 
       if (image && image !== originalValues.profileImage) {
@@ -192,7 +192,7 @@ const ProfileScreen = () => {
       
       // Send PUT request to update profile
       const response = await axios.put(
-        `http://192.168.50.83:3000/api/users/profiles/${data.email}`,
+        `http://172.20.10.2:3000/api/users/profiles/${data.email}`,
         formData,
         {
           headers: {
